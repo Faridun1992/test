@@ -8,11 +8,7 @@ use Illuminate\Http\Request;
 
 class GenreController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         $genres = Genre::latest()->paginate(10);

@@ -22,7 +22,7 @@ class GenreFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->word,
+            'title' => $this->faker->unique()->word,
             'created_at' => $this->faker->dateTimeBetween('-2 years', now()),
         ];
     }
