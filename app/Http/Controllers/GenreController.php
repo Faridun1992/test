@@ -46,6 +46,7 @@ class GenreController extends Controller
     public function destroy(Genre $genre)
     {
         $genre->movies()->detach();
+        $genre->delete();
         return redirect()->route('genres.index')->with('status', $genre->title.' успешно удален');
     }
 }
